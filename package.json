@@ -11,7 +11,7 @@
     "db:push": "drizzle-kit push --force --config=./drizzle.config.ts",
     "db:seed": "tsx db/seed.ts",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist/public"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -105,5 +105,5 @@
   "optionalDependencies": {
     "bufferutil": "^4.0.8"
   },
-  "homepage": "https://ShegzBit.github.io/my-app"
+  "homepage": "https://ShegzBit.github.io/JupitaLanding"
 }
