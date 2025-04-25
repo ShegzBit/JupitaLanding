@@ -3,11 +3,356 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Jupita - Fintech Solutions for Microfinance Banks</title>
+    <meta name="description" content="Jupita delivers tailored SaaS platforms for microfinance banks to streamline loan origination, customer onboarding, and credit risk assessment." />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              jupita: {
+                primary: "#4361ee",
+                secondary: "#3f37c9",
+                accent: "#4cc9f0",
+                success: "#2ec4b6",
+                gray: "#64748b",
+                light: "#f8fafc",
+                dark: "#0f172a"
+              }
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Inter", "sans-serif"]
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <style>
+      /* Custom CSS Styles for Jupita Website */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        color: #0f172a;
+        background-color: #ffffff;
+      }
+
+      /* Animations */
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      .animate-slide-up {
+        animation: slideUp 0.8s ease-out forwards;
+      }
+
+      @keyframes slideUp {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-pulse-slow {
+        animation: pulseSlow 3s ease-in-out infinite;
+      }
+
+      @keyframes pulseSlow {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+      }
+
+      /* Floating Dots and Shapes */
+      .floating-dots::before,
+      .floating-dots::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .floating-dots::before {
+        top: 20%;
+        left: 10%;
+        animation: float 13s ease-in-out infinite;
+      }
+
+      .floating-dots::after {
+        top: 60%;
+        left: 80%;
+        animation: float 17s ease-in-out infinite;
+      }
+
+      /* Reveal Animation for Scroll */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s ease-out;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Gradient Background */
+      .gradient-background {
+        background: linear-gradient(135deg, #4361ee, #4cc9f0);
+      }
+
+      /* Button Glow Effect */
+      .button-glow {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .button-glow::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+      }
+
+      .button-glow:hover::after {
+        opacity: 1;
+      }
+
+      /* Scrolling Text */
+      .scrolling-text-container {
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .scrolling-text {
+        display: inline-flex;
+        animation: scroll 20s linear infinite;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* Scale In Animation */
+      .scale-in {
+        opacity: 0;
+        transform: scale(0.8);
+        transition: all 0.5s ease-out;
+      }
+
+      .scale-in.active {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      /* Feature Card Hover Effect */
+      .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+
+      /* Mobile Menu Animation */
+      .mobile-menu {
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+      }
+
+      .mobile-menu.active {
+        max-height: 1000px;
+        opacity: 1;
+      }
+    </style>
   </head>
   <body>
+    <!-- Put the HTML content here -->
     <div id="root"></div>
+    
     <script type="module" src="/src/main.tsx"></script>
     <!-- This script injects a replit badge into the page, please feel free to remove this line -->
     <script type="text/javascript" src="https://replit.com/public/js/replit-badge-v3.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            mobileMenuButton.setAttribute(
+              'aria-expanded', 
+              mobileMenuButton.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'
+            );
+          });
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 100,
+                behavior: 'smooth'
+              });
+              
+              // Close mobile menu if open
+              if (mobileMenu && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+              }
+            }
+          });
+        });
+        
+        // Reveal animations on scroll
+        function revealOnScroll() {
+          const elements = document.querySelectorAll('.reveal');
+          const scaleElements = document.querySelectorAll('.scale-in');
+          
+          const windowHeight = window.innerHeight;
+          const revealPoint = 150;
+          
+          elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop < windowHeight - revealPoint) {
+              element.classList.add('active');
+            }
+          });
+          
+          scaleElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop < windowHeight - revealPoint) {
+              element.classList.add('active');
+            }
+          });
+        }
+        
+        // Run once on load
+        revealOnScroll();
+        
+        // Add scroll event listener
+        window.addEventListener('scroll', revealOnScroll);
+        
+        // Track redirects
+        const redirectLinks = document.querySelectorAll('a[href^="https://getjupita.com"], a[href^="https://app.getjupita.com"]');
+        
+        redirectLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const originalHref = this.getAttribute('href');
+            let apiEndpoint = '';
+            
+            if (originalHref.includes('app.getjupita.com')) {
+              apiEndpoint = '/api/redirect/app';
+            } else if (originalHref.includes('getjupita.com')) {
+              apiEndpoint = '/api/redirect/jupita';
+            }
+            
+            // Track redirect then navigate
+            if (apiEndpoint) {
+              fetch(apiEndpoint)
+                .then(response => {
+                  // Redirect to original URL regardless of response
+                  window.location.href = originalHref;
+                })
+                .catch(error => {
+                  // If tracking fails, still redirect
+                  console.error('Redirect tracking error:', error);
+                  window.location.href = originalHref;
+                });
+            } else {
+              // Fallback to direct navigation if no API endpoint
+              window.location.href = originalHref;
+            }
+          });
+        });
+        
+        // Create floating dots dynamically
+        const createFloatingDots = () => {
+          const dotsContainer = document.querySelector('.floating-dots');
+          if (!dotsContainer) return;
+          
+          const dotCount = 5;
+          const positions = [
+            { top: '10%', left: '20%', size: '8px', duration: '13s' },
+            { top: '70%', left: '80%', size: '12px', duration: '17s' },
+            { top: '30%', left: '60%', size: '6px', duration: '15s' },
+            { top: '60%', left: '30%', size: '10px', duration: '19s' },
+            { top: '20%', left: '90%', size: '7px', duration: '14s' }
+          ];
+          
+          positions.forEach((pos, index) => {
+            const dot = document.createElement('div');
+            dot.className = 'absolute rounded-full bg-white/20';
+            dot.style.top = pos.top;
+            dot.style.left = pos.left;
+            dot.style.width = pos.size;
+            dot.style.height = pos.size;
+            dot.style.animation = `float ${pos.duration} ease-in-out infinite`;
+            dot.style.animationDelay = `${index * 0.5}s`;
+            
+            dotsContainer.appendChild(dot);
+          });
+        };
+        
+        createFloatingDots();
+      });
+    </script>
   </body>
 </html>
