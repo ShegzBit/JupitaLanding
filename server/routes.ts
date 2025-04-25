@@ -1,6 +1,6 @@
-import type { Express } from "express";
+import { type Express } from "express";
 import { createServer, type Server } from "http";
-import { storage } from "./storage";
+import path from "path";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Simple redirect counter for analytics
@@ -25,7 +25,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
     redirectCountApp++;
     res.redirect('https://app.getjupita.com');
   });
+  
+  // Serve the main HTML file
+  app.get('/', (req, res) => {
+    res.sendFile(path.join(process.cwd(), 'public/index.html'));
+  });
 
+  // Create HTTP server
   const httpServer = createServer(app);
 
   return httpServer;
