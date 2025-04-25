@@ -1,0 +1,54 @@
+import { Switch, Route } from "wouter";
+import { queryClient } from "./lib/queryClient";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { Toaster } from "@/components/ui/toaster";
+import NotFound from "@/pages/not-found";
+import Home from "@/pages/Home";
+import { useEffect } from "react";
+
+function Router() {
+  return (
+    <Switch>
+      <Route path="/" component={Home}/>
+      {/* Fallback to 404 */}
+      <Route component={NotFound} />
+    </Switch>
+  );
+}
+
+function App() {
+  useEffect(() => {
+    // Initialize reveal animations
+    const checkReveal = () => {
+      const windowHeight = window.innerHeight;
+      const revealPoint = 150;
+      
+      document.querySelectorAll('.reveal, .scale-in').forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+        
+        if (elementTop < windowHeight - revealPoint) {
+          element.classList.add('active');
+        }
+      });
+    };
+    
+    // Check on page load
+    checkReveal();
+    
+    // Check on scroll
+    window.addEventListener('scroll', checkReveal);
+    
+    return () => {
+      window.removeEventListener('scroll', checkReveal);
+    };
+  }, []);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Router />
+      <Toaster />
+    </QueryClientProvider>
+  );
+}
+
+export default App;
