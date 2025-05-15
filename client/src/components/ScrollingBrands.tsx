@@ -23,7 +23,7 @@ const ScrollingBrands = () => {
             Trusted by leading microfinance institutions
           </span>
           <img
-            src="images/breezeLogo.jpg"
+            src="/images/breezeLogo.jpg"
             className="w-24 h-8 bg-gray-300/30 rounded"
           />
           <img
