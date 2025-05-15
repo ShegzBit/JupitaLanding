@@ -19,9 +19,9 @@ const featureCards = [
         />
       </svg>
     ),
-    title: "Decision Engine",
+    title: "A single AI Decisioning Platform",
     description:
-      "A flexible decision engine that lets you define variables, permitted values or value types, assign weights, and configure scoring to create a personalized loan approval process for your business.",
+      "A flexible AI Decisioning Platform for Credit Risk. That helps you make the right decisions",
     benefits: [
       "Customizable variables and rules",
       "Weighted scoring system",
@@ -54,6 +54,7 @@ const featureCards = [
       "Automated data extraction",
       "Income verification",
       "Spending pattern analysis",
+      "Spot altered statements",
     ],
     delay: 0.2,
     iconBgColor: "bg-[hsl(var(--jupita-secondary))]/10",
@@ -78,11 +79,11 @@ const Features = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Empowering Microfinance Banks
+            Empowering Smart Lenders
           </h2>
           <p className="text-[hsl(var(--jupita-gray))] text-lg max-w-2xl mx-auto">
             Our suite of fintech solutions streamlines operations and enhances
-            customer experiences for microfinance institutions.
+            customer experiences for credit institutions.
           </p>
         </motion.div>
 
