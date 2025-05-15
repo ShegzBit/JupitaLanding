@@ -23,30 +23,30 @@ const ScrollingBrands = () => {
             Trusted by leading microfinance institutions
           </span>
           <img
-            src="../../images/breezeLogo.jpg"
+            src="images/breezeLogo.jpg"
             className="w-24 h-8 bg-gray-300/30 rounded"
           />
           <img
-            src="../../images/sharaLogo.jpg"
+            src="/images/sharaLogo.jpg"
             className="w-32 h-8 bg-gray-300/30 rounded"
           />
           <img
-            src="../../images/seamlessHrLogo.jpg"
+            src="/images/seamlessHrLogo.jpg"
             className="w-28 h-8 bg-gray-300/30 rounded"
           />
           <span className="text-[hsl(var(--jupita-gray))] font-medium">
             Trusted by leading microfinance institutions
           </span>
           <img
-            src="../../images/breezeLogo.jpg"
+            src="/images/breezeLogo.jpg"
             className="w-24 h-8 bg-gray-300/30 rounded"
           />
           <img
-            src="../../images/sharaLogo.jpg"
+            src="/images/sharaLogo.jpg"
             className="w-32 h-8 bg-gray-300/30 rounded"
           />
           <img
-            src="../../images/seamlessHrLogo.jpg"
+            src="/images/seamlessHrLogo.jpg"
             className="w-28 h-8 bg-gray-300/30 rounded"
           />
         </motion.div>
