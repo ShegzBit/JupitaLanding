@@ -23,30 +23,30 @@ const ScrollingBrands = () => {
             Trusted by leading microfinance institutions
           </span>
           <img
-            src="/images/breezeLogo.jpg"
+            src="https://res.cloudinary.com/dlyac7h41/image/upload/v1747354046/breezeLogo_izbo0w.jpg"
             className="w-24 h-8 bg-gray-300/30 rounded"
           />
           <img
-            src="/images/sharaLogo.jpg"
+            src="https://res.cloudinary.com/dlyac7h41/image/upload/v1747354046/sharaLogo_wa78ax.jpg"
             className="w-32 h-8 bg-gray-300/30 rounded"
           />
           <img
-            src="/images/seamlessHrLogo.jpg"
+            src="https://res.cloudinary.com/dlyac7h41/image/upload/v1747354047/seamlessHrLogo_fv0kpr.jpg"
             className="w-28 h-8 bg-gray-300/30 rounded"
           />
           <span className="text-[hsl(var(--jupita-gray))] font-medium">
             Trusted by leading microfinance institutions
           </span>
           <img
-            src="/images/breezeLogo.jpg"
+            src="https://res.cloudinary.com/dlyac7h41/image/upload/v1747354046/breezeLogo_izbo0w.jpg"
             className="w-24 h-8 bg-gray-300/30 rounded"
           />
           <img
-            src="/images/sharaLogo.jpg"
+            src="https://res.cloudinary.com/dlyac7h41/image/upload/v1747354046/sharaLogo_wa78ax.jpg"
             className="w-32 h-8 bg-gray-300/30 rounded"
           />
           <img
-            src="/images/seamlessHrLogo.jpg"
+            src="https://res.cloudinary.com/dlyac7h41/image/upload/v1747354047/seamlessHrLogo_fv0kpr.jpg"
             className="w-28 h-8 bg-gray-300/30 rounded"
           />
         </motion.div>
