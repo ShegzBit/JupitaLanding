@@ -61,7 +61,7 @@ const Hero = () => {
               className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-slide-up"
             >
               <a
-                href="https://calendly.com/wadeyemi-getjupita/30min"
+                href="https://calendly.com/hello-getjupita/30min"
                 className="button-glow inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-lg text-white bg-[hsl(var(--jupita-primary))] hover:bg-[hsl(var(--jupita-secondary))] transition shadow-lg hover:shadow-xl"
               >
                 Learn More
