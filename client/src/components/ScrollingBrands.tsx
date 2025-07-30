@@ -42,11 +42,15 @@ const ScrollingBrands = () => {
             className="w-24 h-8 bg-gray-300/30 rounded"
           />
           <img
-            src="https://res.cloudinary.com/dlyac7h41/image/upload/v1747354046/sharaLogo_wa78ax.jpg"
+            src="https://res.cloudinary.com/dlyac7h41/image/upload/v1753876790/CarbonTechLogo_orjzfp.jpg"
             className="w-32 h-8 bg-gray-300/30 rounded"
           />
           <img
             src="https://res.cloudinary.com/dlyac7h41/image/upload/v1747354047/seamlessHrLogo_fv0kpr.jpg"
+            className="w-28 h-8 bg-gray-300/30 rounded"
+          />
+          <img
+            src="https://res.cloudinary.com/dlyac7h41/image/upload/c_crop,ar_16:9/v1753877448/CelerisLogo2Chatgpt_d1qkqa.png"
             className="w-28 h-8 bg-gray-300/30 rounded"
           />
         </motion.div>
